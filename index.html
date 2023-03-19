@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Game Page </title>
+        <link rel="stylesheet" href="game.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header> 
+            <a href="#" class="logo">Ry <span>Zo</span>ne</a>
+            <ul class="nav">
+                <li><a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/profile.html">Profile</a></li>
+                <li><a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/message.html">Message</a></li>
+                <li><a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/about2.html">About</a></li>
+                <li><a href="#"  onclick="openPopup()">Tournament</a></li>
+                <li><a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/setting.html">Setting</a></li>
+            </ul>
+            <div class="action">
+                <div class="searchBx">
+                    <a href="#"><i class='bx bx-search'></i></a>
+                    <input type="text" placeholder="Search RY..">
+                </div>
+            </div>
+            <div class="toggleMenu"></div>
+        </header>
+
+        <!-- Home Banner-->
+        <div class="banner">
+            <div class="bg">
+                <div class="content">
+                    <h2>Ry_Zone<br>
+                        <br>
+                    <h3>Gaming Youtuber</h3></h2>
+                    <a href="#" class="btn" onclick="openPopup2()">Play Now</a>
+                    <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/about.html" class="btn">choose Games</a>
+                </div>
+                <img src="C:\Users\Ritesh\Downloads\gaming-removebg-preview.png">
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <img src="C:\Users\Ritesh\Pictures\profile.png">
+            <h2>Ry Zone</h2>
+            <p>The Option start very soon . <br>it is called
+            to Ry Zone Official<br>
+             player info in Game</p>
+            <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/index.html">
+            <button type="button">OK</button>
+            </a>
+        </div>
+        <div class="popup2" id="popup2">
+            <h2>Ry Zone</h2>
+            <br>
+            <br>
+            <p>Choose games tap to click after <br>
+            start more games</p>
+            <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/index.html"><img src="C:\Users\Ritesh\Pictures\close.png" width="50" height="50"></a>
+            <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/about.html">
+            <button type="button">Choose games</button>
+            </a>
+        </div>
+        <script>
+            let popup = document.getElementById("popup");
+    
+            function openPopup(){
+                popup.classList.add("open-popup")
+            }
+            function closePopup(){
+                popup.classList.remove("return")
+            }
+            let popup2 = document.getElementById("popup2");
+    
+            function openPopup2(){
+                popup2.classList.add("open-popup2")
+            }
+            function closePopup2(){
+                popup2.classList.remove("return")
+            }
+        </script>
+        </body>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-size: cover;
+}
+nav{
+    background: #e4dbdb;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    width: 120px;
+}
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 30px;
+    color: white;
+}

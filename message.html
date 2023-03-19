@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ry Twit!!!..</title>
+        <link rel="stylesheet" href="ry.css">
+    </head>
+    <body>
+        <div class="comment-box">
+            <h2>comment</h2>
+            <from action="#">
+                <input type="text" name="name" placeholder="your @ id name...!">
+                <input type="email" name="email" placeholder="Ry ID Num!!!..">
+                <textarea name="Message" placeholder="Write Ry twit.....!!!!!!"></textarea>
+                <a href="#" onclick="openPopup()"><button type="submit">Send RY</button></a>
+            </from>
+        </div>
+        <div class="popup" id="popup">
+            <h1>Message Successfully!!</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>From : Ry_Zone</h3>
+            <br>
+            <br>
+            <h3>To : GYT_Gaming</h3>
+            <br>
+            <br>
+            <h3>Comment : .....!!<a href="#">©</a></h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p> © Not guidlines 2023 !</p>
+            <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/index.html">
+            <button type="button">Back</button>
+            </a>
+        </div>
+        <script>
+            let popup = document.getElementById("popup");
+    
+            function openPopup(){
+                popup.classList.add("open-popup")
+            }
+            function closePopup(){
+                popup.classList.remove("return")
+            }
+        </script>
+    </body>
+</html>

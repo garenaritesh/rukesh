@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> carrom </title>
+        <link rel="stylesheet" href="carrom.css">
+    </head>
+    <body>
+        <div class="mycanvas">
+            <div class="outer-board">
+                <div class="inner-board"></div>
+            </div>
+              <div class="l1"></div>
+              <div class="l2"></div>
+              <div class="l3"></div>
+              <div class="l4"></div>
+              
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+              
+               <div class="in-line-1"></div>
+                <div class="in-line-2"></div>
+                <div class="in-line-3"></div>
+                <div class="in-line-4"></div>
+              
+               <div class="ball-line-1"></div>
+                <div class="ball-line-2"></div>
+                <div class="ball-line-3"></div>
+                <div class="ball-line-4"></div>
+              
+              
+               <div class="ball-2-line-1"></div>
+                <div class="ball-2-line-2"></div>
+                <div class="ball-2-line-3"></div>
+                <div class="ball-2-line-4"></div>
+              
+              <div class="circle-1"></div>
+              <div class="circle-2"></div>
+              <div class="circle-3"></div>
+              
+              <div class="goti-1"></div>
+                <div class="goti-2"></div>
+                <div class="goti-3"></div>
+                <div class="goti-4"></div>
+                <div class="goti-5"></div>
+                <div class="goti-6"></div>
+                  <div class="goti-7"></div>
+              
+              <div class="striker"></div>
+            
+            
+              </div>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+            <script>
+                gsap.to(".striker",{y:-95,ease:"back",delay:4.4});
+                gsap.to(".goti-2",{y:-100,delay:4.5});
+                gsap.to(".goti-1",{y:-15,x:-150,delay:4.5});
+                gsap.to(".goti-3",{y:-200,x:152,opacity:0.3,delay:4.5});
+                gsap.to(".goti-4",{y:-100,x:-150,delay:4.5});
+                gsap.to(".goti-5",{y:-150,x:-150,delay:4.5});
+                gsap.to(".goti-6",{y:-120,x:50,delay:4.5});
+                gsap.to(".goti-7",{y:-50,x:180,ease:"bounce",delay:4.5});
+            </script>      
+    </body>
+</html>

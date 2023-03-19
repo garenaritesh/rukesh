@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Profile </title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                border: none;
+                outline: none;
+                scroll-behavior: smooth;
+                font-family: sans-serif;
+            }
+            :root{
+                --bg-color: #1f242d;
+                --second-bg-color: #323946;
+                --text-color: #fff;
+                --main-color: #0ef;
+            }
+            html{
+                font-size: 62.5%;
+                overflow-x: hidden;
+            }
+            body{
+                background: var(--bg-color);
+                color: var(--text-color);
+            }
+            .header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 2rem 9%;
+                background: var(--bg-color);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+            }
+            .logo{
+                font-size: 2.5rem;
+                color: var(--text-color);
+                font-weight: 600;
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Ry Zone</a>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello , It's Me</h3>
+                <h1>Ritesh Thakre</h1>
+                <h3>Owner OF <span>Ry Zone</span></h3>
+                <p>Ry Zone battle ground servival games of esports.</p>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube' ></i></a>
+                </div>
+                <a href="#" class="btn">Dowload CV</a>
+            </div>
+            
+        </section>
+    </body>
+</html>

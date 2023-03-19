@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Profile </title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            body
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: linear-gradient(45deg,#fbda61,#ff5acd);
+            }
+            .card
+            {
+                position: relative;
+                width: 350px;
+                height: 190px;
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+                transition: 0.5s;
+            }
+            .card:hover
+            {
+                height: 500px;
+            }
+            .imgBx
+            {
+                position: absolute;
+                left: 50%;
+                top: -50px;
+                transform: translateX(-50%);
+                width: 150px;
+                height: 150px;
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+                overflow: hidden;
+                transition: 0.5s;
+            }
+            .card:hover .imgBx
+            {
+                width: 250px;
+                height: 250px; 
+            }
+            .imgBx img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .card .content
+            {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                overflow: hidden;
+            }
+            .card .content .details
+            {
+                padding: 40px;
+                text-align: center;
+                width: 100%;
+                transition: 0.5s;
+                transform: translateY(150px);
+            } 
+            .card:hover .content .details
+            {
+                transform: translateY(0px);
+            }
+            .card .content .details h2 
+            {
+                font-size: 1.25em;
+                font-weight: 600;
+                color: solid black;
+                line-height: 1.2em;
+            }
+            .card .content .details h2 span
+            {
+                font-size: 0.75em;
+                font-weight: 500;
+                opacity: 0.5;
+            }
+            .card .content .details .data
+            {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+            }
+            .card .content .details .data h3 
+            {
+                font-size: 1em;
+                color: #555;
+                line-height: 1.2em;
+                font-weight: 600;
+            }
+            .card .content .details .data h3 span
+            {
+                font-size: 0.85em;
+                font-weight: 400;
+                font-style: italic;
+                color: black;
+            }
+            .card .content .details .actionBtn
+            {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            } 
+            .card .content .details .actionBtn button
+            {
+                padding: 10px 30px;
+                border: none;
+                outline: none;
+                font-size: 1em;
+                font-weight: 500;
+                background: #ff5acd;
+                color: #fff;
+                cursor: pointer;
+            }
+            .card .content .details .actionBtn button:hover{
+                color: #999;
+                background-color: #fff;
+            }
+            .card .content .details .actionBtn button:nth-child(2)
+            {
+                border: 1px solid #999;
+                color: #999;
+                background: #fff;
+            }
+            h1 span{
+            color: #e81236;
+            }
+            .popup{
+                width: 400px;
+                background: white;
+                border-radius: 6px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-50%) scale(0.1);
+                text-align: center;
+                padding: 0 30px 30px;
+                color: #333;
+                visibility: hidden;
+                transition: transform 0.4s, top 0.4s;
+            }
+            .open-popup{
+                visibility: visible;
+                top: 50%;
+                left: 80%;
+                right: 20%;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            .popup img{
+                width: 100px;
+                margin-top: -50px;
+                border-radius: 50%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            .popup h2{
+                font-size: 38px;
+                font-weight: 500;
+                margin: 30px 0 10px;
+            }
+            .popup button{
+                width: 100%;
+                margin-top: 50px;
+                padding: 10px 0;
+                background: #6fd649;
+                color: white; 
+                border: 0;
+                outline: none;
+                font-size: 18px;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+            }
+            .popup2{
+                width: 400px;
+                background: white;
+                border-radius: 6px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-50%) scale(0.1);
+                text-align: center;
+                padding: 0 30px 30px;
+                color: #333;
+                visibility: hidden;
+                transition: transform 0.4s, top 0.4s;
+            }
+            .open-popup2{
+                visibility: visible;
+                top: 50%;
+                left: 20%;
+                right: 80%;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            .popup2 p img{
+                width: 30px;
+                height: 20px;
+            }
+            .popup2 h2{
+                font-size: 38px;
+                font-weight: 500;
+                margin: 30px 0 10px;
+            }
+            .popup2 button{
+                width: 100%;
+                margin-top: 50px;
+                padding: 10px 0;
+                background: #6fd649;
+                color: white; 
+                border: 0;
+                outline: none;
+                font-size: 18px;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="imgBx">
+                <img src="C:\Users\Ritesh\Pictures\alok.png">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Ry Zone<br><span>Gaming Youtuber<img src="C:\Users\Ritesh\Downloads\bluetick-removebg-preview (1).png" width="30" heigh="20" class="btn" onclick="openPopup()"></span></h2>
+                    <div class="data">
+                        <h5>2<br><span>SESSION</span></h5>
+                        <h4>2556<br><span>RY ZONE SCORE</span></h4>
+                        <h5`>15235<br><span>Likes</span></h5>
+                   </div>
+                    <div class="actionBtn">
+                        <a href="#"  onclick="openPopup2()"><button>Request</button></a>
+                        <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/message.html"><button>message</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="popup" id="popup">
+        <img src="C:\Users\Ritesh\Pictures\profile.png">
+        <h2>Gaming Youtuber</h2>
+        <br>
+        <br>
+        <h3> Leader : GYT_Gaming</h3>
+        <i id="close" class="fas fa-times"></i>
+        <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/profile.html">
+        <button type="button">OK</button>
+        </a>
+    </div>
+    <div class="popup2" id="popup2">
+        <h2> Your Request </h2>
+        <br>
+        <h3>Successfully!!!</h3>
+        <p1 style="color: red;">But not recieve your request for freind</p1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p2>This player are played in Gaming youtuber<img src="C:\Users\Ritesh\Downloads\bluetick-removebg-preview (1).png" width="30px" heigh="20px"></p2>
+        <br>
+        <p3>This 🅡 batch player Ry Zone</p3>
+        <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/profile.html">
+        <button type="button">OK</button>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="legend">
+        <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/index.html"><img src="C:\Users\Ritesh\Pictures\logout.png" width="50" height="50"></a>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+        function closePopup(){
+            popup.classList.remove("return")
+        }
+        let popup2 = document.getElementById("popup2");
+
+        function openPopup2(){
+            popup2.classList.add("open-popup2")
+        }
+        function closePopup2(){
+            popup2.classList.remove("return")
+        }
+    </script>
+    </body>
+</html>

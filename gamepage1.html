@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http*-equiv="X-UA-Compatible" content="IE=edge">
+    <title> RY zoNE </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      *
+      {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins' sans-serif;
+      }
+      body{
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        min-height: 100vh;
+        background-size: cover;
+      }
+      .navigation{
+        position: relative;
+        width: 400px;
+        height: 70px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      .navigation ul {
+        display: flex;
+        width: 350px;
+      }
+      .navigation ul li {
+        position: relative;
+        list-style: none;
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+      }
+      .navigation ul li a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+      }
+      .navigation ul li a .icon{
+        position: relative;
+        display: block;
+        line-height: 75px;
+        font-size: 1.5em;
+        text-align: center;
+        transition: 0.5s;
+        color: var(--clr);
+      }
+      .navigation ul li:hover a .icon{
+        transform: translateY(-35px);
+      }
+      .navigation ul li a .text
+      {
+        position: absolute;
+        color: var(--clr);
+        font-weight: 400;
+        font-size: 0.75em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .navigation ul li:hover a .text{
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .box{
+        background-color: #fff;
+        width: 500px;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 25px;
+      }
+      input{
+        width: 240px;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 18px;
+      }
+      .icon{
+        color: skyblue;
+        cursor: pointer;
+      }
+      .button{
+        width: 50%;
+        height: 25px
+      }
+      .popup{
+        width: 400px;  
+        background: white;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+        }
+      .open-popup{
+        visibility: visible;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        }
+      .popup p{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+        color: red;
+        }
+      .popup button{
+         width: 100%;
+         margin-top: 50px;
+         padding: 10px 0;
+         background: #6fd649;
+         color: white; 
+         border: 0;
+         outline: none;
+         font-size: 18px;
+         border-radius: 4px;
+         cursor: pointer;
+         box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+        }
+    </style>
+  </head>
+  <body background="C:\Users\Ritesh\Pictures\background2.jpg">
+    <span class="box">
+      <input type="text" placeholder="search in Ry....">
+      <i class="icon"><ion-icon name="search-outline"></ion-icon></i>
+    </span>
+    <div class="button">
+      <input type="button" name="Play">
+    </div>
+    <div class="navigation">
+      <ul>
+        <li class="list">
+          <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/profile.html">
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/ry%20twitter.html">
+            <span class="icon"><ion-icon name="mail-unread-outline"></ion-icon></span>
+            <span class="text">message</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#"  onclick="openPopup()">
+            <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+            <span class="text">like</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#"  onclick="openPopup()">
+            <span class="icon"><ion-icon name="help-buoy-outline"></ion-icon></span>
+            <span class="text">Help ?</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/setting.html">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="text">Setting</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="icon">
+      <button type="button">Play</button>
+    </div>
+    <div class="popup" id="popup">
+      <p> server has not defined.To next Update before start option in Ry zone</p>
+      <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/gamepage1.html"><button>Cancel</button></a>
+  </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup(){
+          popup.classList.add("open-popup")
+      }
+      function closePopup(){
+          popup.classList.remove("return")
+      }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Game Page </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            body{
+                background: #050e2d; 
+            }
+            .about{
+                position: relative;
+                width: 100%;
+                min-height: 75vh;
+                padding: 0px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .about .contentBx{
+                width: 50%;
+                margin: 20px;
+            }
+            .about .contentBx h2{
+                font-size: 3em;
+                font-weight: 700;
+                color: #fff;
+            }
+            .about .contentBx p{
+                max-width: 600px;
+                text-align: justify;
+                color: #dbd9d9;
+            }
+            .about .contentBx p a{
+                justify-content: center;
+                align-items: center;
+                border: none;
+                color: red;
+                box-shadow: 0 0 10px whitesmoke;
+            }
+            .about .contentBx p a:hover{
+                background-color: azure;
+                border-radius: 10px;
+                box-shadow: #dbd9d9;
+            }
+            .about .contentBx a{
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 20px 0;
+                border: 1px solid #1aeeef;
+                text-decoration: none;
+                font-weight: 700;
+                border-radius: 5px;
+                color: white;
+                box-shadow: 0 0 10px #1aeeef;
+            }
+            .about .contentBx a:hover{
+                background: #1aeeef;
+                border: none;
+                color: #050e2d;
+                box-shadow: 0 0 10px #1aeeef;
+            }
+            .popup{
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    right: 20%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup p{
+    text-decoration: none;
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup a{
+    text-decoration: none;
+}
+.popup  img{
+    width: 50px;
+    height: 50px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: white; 
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.popup button:hover{
+    color: white;
+    background-color: #dfaddf;
+}
+        </style>
+    </head>
+    <body>
+        <!-- About -->
+        <div class="about">
+            <div class="contentBx">
+                <h2>About Us</h2>
+                <p>Ry Zone<br>
+                    is a battle ground game.<br>
+                    An Entertainer game engine created by Ritesh Thackeray has been created.<br> 
+                    <br>
+                    <br>
+                    <img src="C:\Users\Ritesh\Desktop\Ry Zone\Ry.jpeg" width="250" height="250px">   
+                    <br>
+                    <br>
+                    <br>
+                    This game is online games.<br>
+                    <br>
+                    Esports to players In world eswic with ask.<br>
+                    <br>
+                    The game is engine private company for make our RY ZONE.
+                    <br>
+                    <br>
+                    This game is enjoyed and Entertainer for make.
+                    <br>
+                    <br>
+                    <legend align="center">
+                        <a href="#"  onclick="openPopup()">Contact</a>
+                    <br>
+                    <a href="mailto: rkthakre554@gmail.com">E-mail</a>
+                    <br>
+                    <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/work.html">Help-center</a>
+                    <br>
+                    <a href="#">Rate->US</a>      
+                    </legend>         
+                </p>
+                <a href="file:///C:/Users/Ritesh/Desktop/ritesh%20infotech/swd/about2.html">Ok</a>
+            </div>
+            <img src="C:\Users\Ritesh\Downloads\r-removebg-preview.png">
+        </div>
+        <div class="popup" id="popup">
+            <h1>Help line</h1>
+            <br>
+            <br>
+            <br>
+            <img src="C:\Users\Ritesh\Desktop\Ry Zone\Ry.jpeg">
+            <br>
+            <br>
+            <h3>Ritesh thakare</h3>
+            <br>
+            <br>
+           <p> 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;<br><a href="tel:919327500387">Call now : +91-932-750-0387 </a></p>
+          <a href="about2Ry.html"><button>back</button></a>
+        </div>
+        <legend align="center" style="color: white;">© Ry Zone 2023</legend>  
+        <script>
+            let popup = document.getElementById("popup");
+    
+            function openPopup(){
+                popup.classList.add("open-popup")
+            }
+            function closePopup(){
+                popup.classList.remove("return")
+            }
+            let popup2 = document.getElementById("popup2");
+    
+            function openPopup2(){
+                popup2.classList.add("open-popup2")
+            }
+            function closePopup2(){
+                popup2.classList.remove("return")
+            }
+      </script>
+    </body>
+</html>
